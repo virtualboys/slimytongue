@@ -21,13 +21,7 @@ public class TongueTrigger : MonoBehaviour {
 	
 
 	void Update(){
-		//foreach (BugController bc in m_bugs) {
-		//	bc.gameObject.transform.position = transform.position;
-		//}
 
-		if (Input.GetButtonDown ("Jump2")) {
-			tongueController.Strike ();
-		}
 	}
 
 	public List<BugController> GetBugs() {

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BugSpawner : MonoBehaviour {
 	public Vector3 bounds;
-	public GameObject bug;
+	public GameObject[] bugs;
 
 
 
@@ -18,7 +18,7 @@ public class BugSpawner : MonoBehaviour {
 		if (Random.value < .005f) {
 			Vector3 newBugPos=Vector3.zero;
 			newBugPos = new Vector3 (Random.Range (-bounds.x, bounds.x), 2.0f, Random.Range (-bounds.z, bounds.z));
-			GameObject.Instantiate (bug, newBugPos, Quaternion.identity);
+			GameObject.Instantiate (bugs [Random.Range (0, bugs.Length)], newBugPos, Quaternion.identity);
 			
 		}
 	}
