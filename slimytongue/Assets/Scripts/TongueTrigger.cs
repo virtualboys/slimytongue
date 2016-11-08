@@ -59,6 +59,7 @@ public class TongueTrigger : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision){
+		Debug.Log ("Collision");
 		GameObject obj = collision.gameObject;
 		if (obj.tag == "bug") {
 			BugController bug = obj.GetComponent<BugController> ();
