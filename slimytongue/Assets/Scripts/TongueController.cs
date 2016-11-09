@@ -20,6 +20,7 @@ public class TongueController : MonoBehaviour {
 	public PlayerInput playerInput;
 
 	private TongueTrigger m_tongueTrigger;
+	private FrogSize m_frogSize;
 
 	private bool m_isShooting;
 	private bool m_isRetracting;
@@ -36,6 +37,8 @@ public class TongueController : MonoBehaviour {
 
 	void Start () {
 		m_tongueTrigger = tongueTip.GetComponent<TongueTrigger> ();
+		m_frogSize = GetComponent<FrogSize> ();
+		tongueTip.SetActive (false);
 	}
 
 	void Update () {
@@ -75,15 +78,17 @@ public class TongueController : MonoBehaviour {
 	}
 
 	private void DisableTongue() {
-		m_tongueTrigger.EatBugs ();
+		List<BugController> bugs = m_tongueTrigger.GetBugs ();
+		for (int i = 0; i < bugs.Count; i++) {
+			m_frogSize.GrowSize (bugs [i].GetSize ());
+		}
+		m_tongueTrigger.DestroyBugs ();
 
 		m_isRetracting = false;
 		tongueTip.SetActive (false);
 	}
 
 	public void Strike() {
-		Debug.Log ("Struck");
-
 		m_tongueTrigger.DropBugs ();
 		m_tongueTrigger.DisableTrigger ();
 		RetractTongue ();

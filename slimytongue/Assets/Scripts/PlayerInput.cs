@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerInput : MonoBehaviour {
+
+	public static List<GameObject> players;
 
     public int playerNum;
 
@@ -24,6 +27,11 @@ public class PlayerInput : MonoBehaviour {
             horizontal = "Horizontal2";
             vertical = "Vertical2";
         }
+
+		if (players == null) {
+			players = new List<GameObject> ();
+		}
+		players.Add (gameObject);
     }
 	
 	// Update is called once per frame
@@ -36,8 +44,6 @@ public class PlayerInput : MonoBehaviour {
         dir.x = Input.GetAxis(horizontal);
         dir.z = Input.GetAxis(vertical);
         dir.Normalize();
-
-        Debug.Log(dir);
 
         return dir;
     }

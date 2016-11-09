@@ -12,12 +12,15 @@ public class BugController : MonoBehaviour {
 	public float launchSpeed;
 	public float moveDist;
 	public float moveSpeed;
+	public float runSpeed;
+	public float runRadius;
+	public float size;
 
 	public Animator animator;
 
-	private BugState m_state;
-	private float m_timeInState;
-	private Vector3 m_destination;
+	public BugState m_state;
+	public float m_timeInState;
+	public Vector3 m_destination;
 
 	private GameObject m_tongue;
 
@@ -64,10 +67,11 @@ public class BugController : MonoBehaviour {
 
 	private void DoMove() {
 		Vector3 d = m_destination - transform.position;
+		d.y = 0;
 		float s = moveSpeed * Time.deltaTime;
 
 		//reached destination
-		if (d.magnitude < s) {
+		if (d.magnitude < s * 1.05f) {
 			m_timeInState = 0;
 			animator.SetFloat ("Speed", 0);
 			m_state = BugState.Idle;
@@ -122,5 +126,9 @@ public class BugController : MonoBehaviour {
 		launchDir.Normalize ();
 		
 		m_rigidbody.AddForce (launchDir * launchSpeed * m_rigidbody.mass);
+	}
+
+	public float GetSize() {
+		return size;
 	}
 }

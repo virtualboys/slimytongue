@@ -3,7 +3,8 @@ using System.Collections;
 
 public class MovePlayer : MonoBehaviour {
 
-	public float speed;
+	public float baseSpeed;
+	private float m_speedMult;
 
 	public PlayerInput playerInput;
 	public Animator animator;
@@ -13,6 +14,7 @@ public class MovePlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_tongueController = GetComponent<TongueController> ();
+		m_speedMult = 1.0f;
 	}
 	
 	// Update is called once per frame
@@ -47,6 +49,10 @@ public class MovePlayer : MonoBehaviour {
 			return Vector3.zero;
 		}
 
-		return input.normalized * Time.deltaTime * speed;
+		return input.normalized * Time.deltaTime * baseSpeed * m_speedMult;
+	}
+
+	public void SetSpeedMult(float speedMult) {
+		m_speedMult = speedMult;
 	}
 }

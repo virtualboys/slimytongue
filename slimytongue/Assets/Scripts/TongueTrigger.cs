@@ -36,7 +36,7 @@ public class TongueTrigger : MonoBehaviour {
 		m_collider.enabled = false;
 	}
 
-	public void EatBugs() {
+	public void DestroyBugs() {
 		for (int i = 0; i < m_bugs.Count; i++) {
 			Destroy (m_bugs [i].gameObject);
 		}
@@ -53,14 +53,12 @@ public class TongueTrigger : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision){
-		Debug.Log ("Collision");
 		GameObject obj = collision.gameObject;
 		if (obj.tag == "bug") {
 			BugController bug = obj.GetComponent<BugController> ();
 			bug.GetStuck (gameObject);
 			m_bugs.Add (bug);
 		} else if (obj.tag == "player") {
-			Debug.Log ("hit");
 			TongueController player = obj.GetComponent<TongueController> ();
 			player.Strike ();
 		}
