@@ -18,9 +18,9 @@ TagManager:
   - bug
   - player1
   - player2
-  - 
-  - 
-  - 
+  - frogLighting
+  - groundLighting
+  - objectLighting
   - 
   - 
   - 
