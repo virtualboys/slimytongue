@@ -39,15 +39,15 @@ public class TongueController : MonoBehaviour {
 	}
 
 	void Update () {
-		if(!IsTongueOut() && Input.GetButtonDown(playerInput.shootTongue)) {
+		if(!IsTongueOut() && playerInput.GetShootDown()) {
 			m_isAiming = true;
 
-		} else if (m_isAiming && Input.GetButtonUp (playerInput.shootTongue)) {
+		} else if (m_isAiming && playerInput.GetShootUp()) {
 			ShootTongue ();
 
 		} else if (m_isShooting) {
 			
-			if(Input.GetButton(playerInput.shootTongue)) {
+			if(playerInput.GetShootHeld()) {
 				MoveTongueForward (fastTongueSpeed);
 			} else {
 				UpdateTongueDir ();
@@ -90,8 +90,17 @@ public class TongueController : MonoBehaviour {
 	}
 
 	private void UpdateTongueDir() {
-		float rot = Input.GetAxisRaw (playerInput.horizontal) * turnSpeed * Time.deltaTime;
-		m_tongueDir *= Quaternion.AngleAxis (rot, Vector3.up);
+        Vector3 aim = playerInput.GetAimDir();
+        if(aim.magnitude == 0)
+        {
+            return;
+        }
+
+        Quaternion targetDir = Quaternion.LookRotation(playerInput.GetAimDir());
+
+        //float rot = Input.GetAxisRaw (playerInput.horizontal) * turnSpeed * Time.deltaTime;
+        //m_tongueDir *= Quaternion.AngleAxis (rot, Vector3.up);
+        m_tongueDir = Quaternion.RotateTowards(m_tongueDir, targetDir, turnSpeed * Time.deltaTime);
 	}
 
 	private void MoveTongueForward(float speed) {

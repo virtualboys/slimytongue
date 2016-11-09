@@ -14,10 +14,11 @@ public class PlayerSpawner : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < 2; i++) {
 			GameObject player = GameObject.Instantiate (playerPrefab, spawnPositions [i].position, Quaternion.identity) as GameObject;
-			PlayerInput pi = player.GetComponent<PlayerInput> ();
-			pi.horizontal = horizontalInputs [i];
-			pi.vertical = verticalInputs [i];
-			pi.shootTongue = shootInputs [i];
+			//PlayerInput pi = player.GetComponent<PlayerInput> ();
+            //pi.InitControls(i);
+			//pi.horizontal = horizontalInputs [i];
+			//pi.vertical = verticalInputs [i];
+			//pi.shootTongue = shootInputs [i];
 		}
 	}
 }
