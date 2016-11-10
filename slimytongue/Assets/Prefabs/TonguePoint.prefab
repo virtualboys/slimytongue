@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000011104224240}
   - 54: {fileID: 54000014043546320}
   m_Layer: 9
-  m_Name: TonguePointP1
+  m_Name: TonguePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,9 +34,9 @@ public class ExtrudeTongueMesh : ProcBase {
 
 	// Update is called once per frame
 	void Update () {
+		meshBuilder.ResetGeometry ();
 
 		cps = m_tongueController.GetControlPoints ();
-		//cps.Insert (0, m_tongueTip.transform);
 		if (cps.Count <= 1) {
 			return;
 		}
@@ -50,28 +50,34 @@ public class ExtrudeTongueMesh : ProcBase {
 			ms.Add (finiteDiffSlope (i));
 		}
 
-		ms [0] = m_tongueTip.transform.forward;
+		//ms [0] = m_tongueTip.transform.forward;
 			
-		Vector3 xPrev, pPrev, d, x, p;
-		for (int i = 0; i < cps.Count-1; i++) {
+		Vector3 xPrev, pPrev, d, x, p, cp, cp1, m, m1;
+		for (int i = 0; i < cps.Count; i++) {
 
-			d = cps [i+1].localPosition - cps [i].localPosition;
+			cp = cps [i].localPosition;
+			m = ms [i];
+			if (i == cps.Count - 1) {
+				cp1 = m_tongueTip.transform.localPosition;
+				m1 = -m_tongueTip.transform.forward;
+			} else {
+				cp1 = cps [i + 1].localPosition;
+				m1 = ms [i + 1];
+			}
+
+			d = cp1 - cp;
 			float l = d.magnitude / numSegmentsPerLink;
 			d.Normalize ();
 
-			xPrev = cps [i].localPosition;
-			pPrev = cps [i].localPosition;
+			xPrev = cp;
+			pPrev = cp;
 
 			for (int j = 0; j < numSegmentsPerLink; j++) {
 				x = xPrev + d * l;
-				p = evalSpline3D (x, ms, i);
-
-				Debug.DrawLine (p, pPrev, Color.red, 0, false);
+				p = evalSpline3D (x, cp, cp1, m, m1);
 
 				ps.Add (p);
 				ts.Add ((p - pPrev).normalized);
-
-				Debug.DrawLine (p, p + .2f * ts [ts.Count - 1], Color.blue, 0, false);
 
 				xPrev = x;
 				pPrev = p;
@@ -79,8 +85,6 @@ public class ExtrudeTongueMesh : ProcBase {
 		}
 
 		UpdateMesh ();
-
-		//cps.RemoveAt (0);
 	}
 
 	//Build the mesh:
@@ -102,7 +106,6 @@ public class ExtrudeTongueMesh : ProcBase {
 	public void UpdateMesh() {
 
 		BeginMeshEdit (meshBuilder.mesh);
-		meshBuilder.ResetGeometry ();
 
 		Vector3 axis;
 		Quaternion rot;
@@ -110,7 +113,7 @@ public class ExtrudeTongueMesh : ProcBase {
 			axis = Vector3.Cross (Vector3.up, ts[i]);
 			float angle = Vector3.Angle (Vector3.up, ts [i]);
 			rot = Quaternion.AngleAxis (angle, axis);
-			BuildRing (meshBuilder, numRadialSegments, ps [i] - transform.localPosition, radius, i / ((float)ps.Count), i > 0, rot);
+			BuildRing (meshBuilder, numRadialSegments, ps [i] - transform.localPosition, radius, i / ((float)numSegmentsPerLink), i > 0, rot);
 			//UpdateRing (mesh, numRadialSegments, ps [i] - transform.localPosition, radius, i, rot);
 		}
 
@@ -118,16 +121,16 @@ public class ExtrudeTongueMesh : ProcBase {
 		meshBuilder.UpdateMesh ();
 	}
 
-	public Vector3 evalSpline3D(Vector3 pos, List<Vector3> ms, int k) {
-		return new Vector3 (evalSpline1D (pos [0], ms, k, 0), 
-							evalSpline1D (pos [1], ms, k, 1), 
-							evalSpline1D (pos [2], ms, k, 2));
+	public Vector3 evalSpline3D(Vector3 pos, Vector3 cp, Vector3 cp1, Vector3 mk, Vector3 mk1) {
+		return new Vector3 (evalSpline1D (pos [0], cp [0], cp1 [0], mk [0], mk1 [0]), 
+							evalSpline1D (pos [1], cp [1], cp1 [1], mk [1], mk1 [1]), 
+							evalSpline1D (pos [2], cp [2], cp1 [2], mk [2], mk1 [2]));
 	}
 
 	/// <param name="coord">0 for x, 1 for y, 2 for z</param>
-	public float evalSpline1D(float x, List<Vector3> ms, int k, int coord) {
-		float xk = cps [k].localPosition [coord];
-		float xk1 = cps [k + 1].localPosition [coord];
+	public float evalSpline1D(float x, float xk, float xk1, float mk, float mk1) {
+		//float xk = cps [k].localPosition [coord];
+		//float xk1 = cps [k + 1].localPosition [coord];
 		float interval = xk1 - xk;
 
 		if (interval == 0) {
@@ -141,8 +144,8 @@ public class ExtrudeTongueMesh : ProcBase {
 		float h01 = t * t * (3 - 2 * t);
 		float h11 = t * t * (t - 1);
 
-		float px = h00 * cps [k].localPosition [coord] + h10  * ms [k] [coord]
-			+ h01 * cps [k + 1].localPosition [coord] + h11  * ms [k + 1] [coord];
+		float px = h00 * xk + h10  * mk
+			+ h01 * xk1 + h11  * mk1;
 		return px;
 	}
 

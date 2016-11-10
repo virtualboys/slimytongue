@@ -106,6 +106,7 @@ public class TongueController : MonoBehaviour {
         //float rot = Input.GetAxisRaw (playerInput.horizontal) * turnSpeed * Time.deltaTime;
         //m_tongueDir *= Quaternion.AngleAxis (rot, Vector3.up);
         m_tongueDir = Quaternion.RotateTowards(m_tongueDir, targetDir, turnSpeed * Time.deltaTime);
+		tongueTip.transform.rotation = m_tongueDir;
 	}
 
 	private void MoveTongueForward(float speed) {
@@ -143,7 +144,9 @@ public class TongueController : MonoBehaviour {
 			return;
 		}
 
-		tongueTip.transform.position += dir.normalized * s;
+		dir.Normalize ();
+		tongueTip.transform.position += dir * s;
+		tongueTip.transform.rotation = Quaternion.LookRotation (-dir);
 	}
 
 	private void GenTonguePoint(Vector3 pos) {
