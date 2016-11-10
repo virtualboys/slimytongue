@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class TongueTrigger : MonoBehaviour {
 
-	public TongueController tongueController;
-
 	private Collider m_collider;
 	private List<BugController> m_bugs;
 

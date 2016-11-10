@@ -170,4 +170,12 @@ public class TongueController : MonoBehaviour {
 		return m_isAiming;
 	}
 
+	public GameObject GetTongueTip() {
+		return tongueTip;
+	}
+
+	public List<Transform> GetControlPoints() {
+		return m_tonguePoints;
+	}
+
 }

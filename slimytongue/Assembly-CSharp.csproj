@@ -47,6 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BugController.cs" />
      <Compile Include="Assets\Scripts\BugSpawner.cs" />
+     <Compile Include="Assets\Scripts\Common\MeshBuilder.cs" />
+     <Compile Include="Assets\Scripts\Common\ProcBase.cs" />
+     <Compile Include="Assets\Scripts\ExtrudeTongueMesh.cs" />
      <Compile Include="Assets\Scripts\FrogSize.cs" />
      <Compile Include="Assets\Scripts\GetBounds.cs" />
      <Compile Include="Assets\Scripts\MovePlayer.cs" />

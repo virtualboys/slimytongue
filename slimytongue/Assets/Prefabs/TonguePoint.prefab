@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000011104224240}
   - 54: {fileID: 54000014043546320}
   m_Layer: 9
-  m_Name: TonguePoint
+  m_Name: TonguePointP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010358539084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
