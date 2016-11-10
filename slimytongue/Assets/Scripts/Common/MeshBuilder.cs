@@ -48,6 +48,7 @@ public class MeshBuilder
 	}
 
 	public void ResetGeometry() {
+        mesh.Clear();
 		m_Vertices.Clear ();
 		m_Normals.Clear ();
 		m_UVs.Clear ();

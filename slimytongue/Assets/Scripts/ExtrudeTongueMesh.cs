@@ -35,6 +35,7 @@ public class ExtrudeTongueMesh : ProcBase {
 	// Update is called once per frame
 	void Update () {
 		meshBuilder.ResetGeometry ();
+        //mesh
 
 		cps = m_tongueController.GetControlPoints ();
 		if (cps.Count <= 1) {
@@ -59,7 +60,7 @@ public class ExtrudeTongueMesh : ProcBase {
 			m = ms [i];
 			if (i == cps.Count - 1) {
 				cp1 = m_tongueTip.transform.localPosition;
-				m1 = -m_tongueTip.transform.forward;
+				m1 = -(m_tongueTip.transform.localRotation * Vector3.forward);
 			} else {
 				cp1 = cps [i + 1].localPosition;
 				m1 = ms [i + 1];
