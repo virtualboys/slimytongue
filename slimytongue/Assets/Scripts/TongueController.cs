@@ -23,6 +23,7 @@ public class TongueController : MonoBehaviour {
 	private FrogSize m_frogSize;
 
 	private bool m_isShooting;
+    private bool m_isFastShot;
 	private bool m_isRetracting;
 	private bool m_isAiming;
 
@@ -37,6 +38,7 @@ public class TongueController : MonoBehaviour {
 
 	void Start () {
 		m_tongueTrigger = tongueTip.GetComponent<TongueTrigger> ();
+        m_tongueTrigger.SetController(this);
 		m_frogSize = GetComponent<FrogSize> ();
 		tongueTip.SetActive (false);
 	}
@@ -49,8 +51,12 @@ public class TongueController : MonoBehaviour {
 			ShootTongue ();
 
 		} else if (m_isShooting) {
-			
-			if(playerInput.GetShootHeld()) {
+			if(playerInput.GetShootHeld())
+            {
+                m_isFastShot = true;
+            }
+
+            if(m_isFastShot) {
 				MoveTongueForward (fastTongueSpeed);
 			} else {
 				UpdateTongueDir ();
@@ -64,6 +70,7 @@ public class TongueController : MonoBehaviour {
 	private void ShootTongue() {
 		m_isAiming = false;
 		m_isShooting = true;
+        m_isFastShot = false;
 		m_tongueLength = 0;
 		m_tongueDir = transform.rotation;
 
@@ -72,7 +79,7 @@ public class TongueController : MonoBehaviour {
 		m_tongueTrigger.EnableTrigger ();
 	}
 
-	private void RetractTongue() {
+	public void RetractTongue() {
 		m_isRetracting = true;
 		m_isShooting = false;
 	}
@@ -89,10 +96,20 @@ public class TongueController : MonoBehaviour {
 	}
 
 	public void Strike() {
-		m_tongueTrigger.DropBugs ();
-		m_tongueTrigger.DisableTrigger ();
-		RetractTongue ();
+        if (IsTongueOut())
+        {
+            m_tongueTrigger.DropBugs();
+            m_tongueTrigger.DisableTrigger();
+            RetractTongue();
+        }
 	}
+
+    public Vector3 GetTongueVelocity()
+    {
+        Vector3 v = m_tongueDir * Vector3.forward;
+        v *= (m_isFastShot) ? fastTongueSpeed : baseTongueSpeed;
+        return v;
+    }
 
 	private void UpdateTongueDir() {
         Vector3 aim = playerInput.GetAimDir();
@@ -172,6 +189,11 @@ public class TongueController : MonoBehaviour {
 	public bool IsAiming() {
 		return m_isAiming;
 	}
+
+    public bool CanPickupBug()
+    {
+        return m_isShooting;
+    }
 
 	public GameObject GetTongueTip() {
 		return tongueTip;
