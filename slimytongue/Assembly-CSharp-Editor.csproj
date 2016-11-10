@@ -45,35 +45,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ColorSuite\ColorSuite-master\Assets\ColorSuite\Editor\ColorSuiteEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\KinoRamp-master 2\Assets\Editor\PackageTool.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\KinoRamp-master 2\Assets\Kino\Ramp\Editor\RampEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\KinoRamp-master 2\Assets\Kino\Ramp\Ramp.cs" />
      <Compile Include="Assets\Editor\RetroPixelProEditor.cs" />
-     <Compile Include="Assets\Shaders\ColorSuite-master\Assets\ColorSuite\Editor\ColorSuiteEditor.cs" />
-     <Compile Include="Assets\Shaders\KinoRamp-master 2\Assets\Editor\PackageTool.cs" />
-     <Compile Include="Assets\Shaders\KinoRamp-master 2\Assets\Kino\Ramp\Editor\RampEditor.cs" />
-     <None Include="Assets\Shaders\GlassStainedBumpDistort.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\BlendOneOne.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\VignetteShader.shader" />
-     <None Include="Assets\Shaders\RetroPixelPro.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\MobileBloom.shader" />
-     <None Include="Assets\Shaders\ColorSuite-master\Assets\Test\Gradient.shader" />
-     <None Include="Assets\Shaders\StainedBumpDistort_COPY.shader" />
-     <None Include="Assets\Shaders\ColorCorrectionCurves.shader" />
-     <None Include="Assets\Shaders\ColorSuite-master\Assets\ColorSuite\Shader\ColorSuite.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\MobileBlur.shader" />
-     <None Include="Assets\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Scripts\ImageFXscripts\GlassStainedBumpDistort.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Scripts\ImageFXscripts\RetroPixelPro.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\ColorSuite\ColorSuite-master\Assets\Test\Gradient.shader" />
+     <None Include="Assets\Scripts\ImageFXscripts\StainedBumpDistort_COPY.shader" />
+     <None Include="Assets\Scripts\ImageFXscripts\ColorCorrectionCurves.shader" />
+     <None Include="Assets\ColorSuite\ColorSuite-master\Assets\ColorSuite\Shader\ColorSuite.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\MobileBlur.shader" />
+     <None Include="Assets\Scripts\ImageFXscripts\ColorCorrectionSelective.shader" />
      <None Include="Assets\WorldUvShader.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
-     <None Include="Assets\Shaders\KinoRamp-master 2\ProjectSettings\ProjectVersion.txt" />
-     <None Include="Assets\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\Blend.shader" />
-     <None Include="Assets\Shaders\ColorCorrectionCurvesSimple.shader" />
-     <None Include="Assets\Shaders\KinoRamp-master 2\Assets\Kino\Ramp\Shader\Ramp.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Editor\ImageEffects\KinoRamp-master 2\ProjectSettings\ProjectVersion.txt" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Scripts\ImageFXscripts\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Editor\ImageEffects\KinoRamp-master 2\Assets\Kino\Ramp\Shader\Ramp.shader" />
      <None Include="Assets\Scripts\Retro Pixel Pro\Readme.txt" />
-     <None Include="Assets\Shaders\ColorSuite-master\ProjectSettings\ProjectVersion.txt" />
-     <None Include="Assets\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
-     <None Include="Assets\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+     <None Include="Assets\ColorSuite\ColorSuite-master\ProjectSettings\ProjectVersion.txt" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BlurAndFlares.shader" />
+     <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BlendForBloom.shader" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
