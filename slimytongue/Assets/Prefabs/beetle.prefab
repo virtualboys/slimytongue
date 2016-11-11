@@ -22,7 +22,7 @@ GameObject:
   - 95: {fileID: 95000013701834884}
   - 135: {fileID: 135000011870695358}
   - 54: {fileID: 54000013030389576}
-  - 114: {fileID: 114000012071111992}
+  - 114: {fileID: 114000013441653128}
   m_Layer: 8
   m_Name: beetle
   m_TagString: bug
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013202622262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - 4: {fileID: 4000013260123258}
   - 33: {fileID: 33000010818338826}
   - 23: {fileID: 23000012541157084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - 4: {fileID: 4000012512952826}
   - 33: {fileID: 33000013127195992}
   - 23: {fileID: 23000014045639980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - 4: {fileID: 4000013879732290}
   - 33: {fileID: 33000011413466850}
   - 23: {fileID: 23000011937192742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - 4: {fileID: 4000013736320944}
   - 33: {fileID: 33000012638556262}
   - 23: {fileID: 23000012046832470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - 4: {fileID: 4000011083945458}
   - 33: {fileID: 33000013361734866}
   - 23: {fileID: 23000013353275846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule.1 0.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - 4: {fileID: 4000013766389818}
   - 33: {fileID: 33000013644652576}
   - 23: {fileID: 23000013557594974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - 4: {fileID: 4000013207056038}
   - 33: {fileID: 33000011923323068}
   - 23: {fileID: 23000013786812878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ba4dbb440d7364cd39051bd834720ed3, type: 2}
+  - {fileID: 2100000, guid: ec0dcac627dba4d2da2ff3531b9db20d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -574,7 +574,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000012071111992
+--- !u!114 &114000013441653128
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -588,7 +588,7 @@ MonoBehaviour:
   launchSpeed: 200
   moveDist: 2
   moveSpeed: 1
-  size: 1
+  size: 0
 --- !u!135 &135000011870695358
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -12,17 +12,20 @@ public class PlayerInput : MonoBehaviour {
 	private string shootTongue;
 	private string horizontal;
 	private string vertical;
+    private string jump;
 
 	// Use this for initialization
 	void Start () {
         if (playerNum == 0)
         {
+            jump = "Leap";
             shootTongue = "Jump";
             horizontal = "Horizontal";
             vertical = "Vertical";
         }
         else if (playerNum == 1)
         {
+            jump = "Leap2";
             shootTongue = "Jump2";
             horizontal = "Horizontal2";
             vertical = "Vertical2";
@@ -52,6 +55,11 @@ public class PlayerInput : MonoBehaviour {
     public bool GetShootDown()
     {
         return Input.GetButtonDown(shootTongue);
+    }
+
+    public bool GetJumpDown()
+    {
+        return Input.GetButtonDown(jump);
     }
 
     public bool GetShootUp()

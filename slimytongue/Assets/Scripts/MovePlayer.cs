@@ -4,15 +4,19 @@ using System.Collections;
 public class MovePlayer : MonoBehaviour {
 
 	public float baseSpeed;
+    public float jumpVel;
 	private float m_speedMult;
 
 	private PlayerInput playerInput;
 	private Animator animator;
 
+    private Rigidbody m_rigidbody;
 	private TongueController m_tongueController;
+    private bool m_jumping;
 
 	// Use this for initialization
 	void Start () {
+        m_rigidbody = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
         animator = GetComponentInChildren<Animator>();
 		m_tongueController = GetComponent<TongueController> ();
@@ -26,7 +30,16 @@ public class MovePlayer : MonoBehaviour {
 		Vector3 movement = Vector3.zero;
 
 		if (m_tongueController.CanMove ()) {
-			movement = Move (input);
+            if(!m_jumping)
+            {
+                if(playerInput.GetJumpDown())
+                {
+                    Jump(input);
+                } else
+                {
+			        movement = Move (input);
+                }
+            } 
 		}
 
 		if (m_tongueController.CanMove () || m_tongueController.IsAiming ()) {
@@ -53,6 +66,14 @@ public class MovePlayer : MonoBehaviour {
 
 		return input.normalized * Time.deltaTime * baseSpeed * m_speedMult;
 	}
+
+    private void Jump(Vector3 input)
+    {
+        input.y = 1;
+        m_rigidbody.AddForce(input * jumpVel * m_rigidbody.mass);
+        Debug.Log("Jump");
+
+    }
 
 	public void SetSpeedMult(float speedMult) {
 		m_speedMult = speedMult;

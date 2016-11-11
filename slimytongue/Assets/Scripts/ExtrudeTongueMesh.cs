@@ -8,7 +8,7 @@ public class ExtrudeTongueMesh : ProcBase {
 	public int numRadialSegments;
 	public float radius;
 
-	public TongueController m_tongueController;
+	private TongueController m_tongueController;
 	private GameObject m_tongueTip;
 
 	private List<Transform> cps;
@@ -20,6 +20,8 @@ public class ExtrudeTongueMesh : ProcBase {
 
 	// Use this for initialization
 	public override void Init () {
+        m_tongueController = GetComponentInParent<TongueController>();
+
 		cps = new List<Transform> ();
 		ps = new List<Vector3> ();
 		ts = new List<Vector3> ();

@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ColorSuite\ColorSuite-master\Assets\ColorSuite\ColorSuite.cs" />
     <Compile Include="Assets\Scripts\BugSpawner.cs" />
     <Compile Include="Assets\Scripts\Bugs\BombBugController.cs" />
     <Compile Include="Assets\Scripts\Bugs\BugController.cs" />
@@ -71,11 +72,52 @@
     <Compile Include="Assets\Scripts\ExtrudeTongueMesh.cs" />
     <Compile Include="Assets\Scripts\FrogSize.cs" />
     <Compile Include="Assets\Scripts\GetBounds.cs" />
+    <Compile Include="Assets\Scripts\ImageFXscripts\Bloom.cs" />
+    <Compile Include="Assets\Scripts\ImageFXscripts\ColorCorrectionCurves.cs" />
+    <Compile Include="Assets\Scripts\ImageFXscripts\ColorCorrectionRamp.cs" />
+    <Compile Include="Assets\Scripts\ImageFXscripts\GrabPass.cs" />
+    <Compile Include="Assets\Scripts\ImageFXscripts\ImageEffectBase.cs" />
+    <Compile Include="Assets\Scripts\ImageFXscripts\PostEffectsBase.cs" />
+    <Compile Include="Assets\Scripts\ImageFXscripts\screenDistort.cs" />
     <Compile Include="Assets\Scripts\MovePlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
+    <Compile Include="Assets\Scripts\Retro Pixel Pro\Scripts\ColorMapCalculator.cs" />
+    <Compile Include="Assets\Scripts\Retro Pixel Pro\Scripts\ColorMapPrecision.cs" />
+    <Compile Include="Assets\Scripts\Retro Pixel Pro\Scripts\ColormapUtils.cs" />
+    <Compile Include="Assets\Scripts\Retro Pixel Pro\Scripts\PalettePresets.cs" />
+    <Compile Include="Assets\Scripts\Retro Pixel Pro\Scripts\RetroPixelPro.cs" />
+    <Compile Include="Assets\Scripts\RotTextCSharp.cs" />
     <Compile Include="Assets\Scripts\TongueController.cs" />
     <Compile Include="Assets\Scripts\TongueTrigger.cs" />
+    <Compile Include="Assets\tweenPosition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\ColorSuite\ColorSuite-master\Assets\ColorSuite\Shader\ColorSuite.shader" />
+    <None Include="Assets\ColorSuite\ColorSuite-master\Assets\Test\Gradient.shader" />
+    <None Include="Assets\ColorSuite\ColorSuite-master\ProjectSettings\ProjectVersion.txt" />
+    <None Include="Assets\Editor\ImageEffects\KinoRamp-master 2\Assets\Kino\Ramp\Shader\Ramp.shader" />
+    <None Include="Assets\Editor\ImageEffects\KinoRamp-master 2\ProjectSettings\ProjectVersion.txt" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\Blend.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BlendOneOne.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BrightPassFilter.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\MobileBlur.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\SeparableBlurPlus.shader" />
+    <None Include="Assets\Editor\ImageEffects\_BloomAndFlares\VignetteShader.shader" />
+    <None Include="Assets\Scripts\ImageFXscripts\ColorCorrectionCurves.shader" />
+    <None Include="Assets\Scripts\ImageFXscripts\ColorCorrectionCurvesSimple.shader" />
+    <None Include="Assets\Scripts\ImageFXscripts\ColorCorrectionSelective.shader" />
+    <None Include="Assets\Scripts\ImageFXscripts\GlassStainedBumpDistort.shader" />
+    <None Include="Assets\Scripts\ImageFXscripts\RetroPixelPro.shader" />
+    <None Include="Assets\Scripts\ImageFXscripts\StainedBumpDistort_COPY.shader" />
+    <None Include="Assets\Scripts\Retro Pixel Pro\Readme.txt" />
+    <None Include="Assets\WorldUvShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
