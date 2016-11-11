@@ -12,15 +12,13 @@ public class BugController : MonoBehaviour {
 	public float launchSpeed;
 	public float moveDist;
 	public float moveSpeed;
-	public float runSpeed;
-	public float runRadius;
 	public float size;
 
-	public Animator animator;
+	private Animator animator;
 
-	public BugState m_state;
-	public float m_timeInState;
-	public Vector3 m_destination;
+	private BugState m_state;
+	private float m_timeInState;
+	private Vector3 m_destination;
 
 	private GameObject m_tongue;
 
@@ -37,6 +35,7 @@ public class BugController : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        animator = GetComponentInChildren<Animator>();
 		m_collider = GetComponent<Collider> ();
 		m_rigidbody = GetComponent<Rigidbody> ();
 

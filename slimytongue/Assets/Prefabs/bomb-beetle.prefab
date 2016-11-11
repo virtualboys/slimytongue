@@ -692,13 +692,7 @@ MonoBehaviour:
   launchSpeed: 200
   moveDist: 2
   moveSpeed: 1
-  runSpeed: 0
-  runRadius: 0
   size: 1
-  animator: {fileID: 95000011192150124}
-  m_state: 2
-  m_timeInState: 0
-  m_destination: {x: 0, y: 0, z: 0}
   timeToExplode: 10
   explosionRadius: 5
   explosionPower: 1000

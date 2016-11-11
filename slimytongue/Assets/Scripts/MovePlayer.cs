@@ -6,13 +6,15 @@ public class MovePlayer : MonoBehaviour {
 	public float baseSpeed;
 	private float m_speedMult;
 
-	public PlayerInput playerInput;
-	public Animator animator;
+	private PlayerInput playerInput;
+	private Animator animator;
 
 	private TongueController m_tongueController;
 
 	// Use this for initialization
 	void Start () {
+        playerInput = GetComponent<PlayerInput>();
+        animator = GetComponentInChildren<Animator>();
 		m_tongueController = GetComponent<TongueController> ();
 		m_speedMult = 1.0f;
 	}

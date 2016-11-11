@@ -17,7 +17,7 @@ public class TongueController : MonoBehaviour {
 	public GameObject tongueTip;
 	public GameObject tonguePointPrefab;
 
-	public PlayerInput playerInput;
+	private PlayerInput playerInput;
 
 	private TongueTrigger m_tongueTrigger;
 	private FrogSize m_frogSize;
@@ -37,6 +37,7 @@ public class TongueController : MonoBehaviour {
 	}
 
 	void Start () {
+        playerInput = GetComponent<PlayerInput>();
 		m_tongueTrigger = tongueTip.GetComponent<TongueTrigger> ();
         m_tongueTrigger.SetController(this);
 		m_frogSize = GetComponent<FrogSize> ();

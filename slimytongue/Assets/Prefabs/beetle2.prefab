@@ -72,7 +72,7 @@ GameObject:
   - 4: {fileID: 4000013610243204}
   - 54: {fileID: 54000010552446824}
   - 135: {fileID: 135000014229317112}
-  - 114: {fileID: 114000014059791784}
+  - 114: {fileID: 114000014040141224}
   m_Layer: 8
   m_Name: beetle2
   m_TagString: bug
@@ -544,7 +544,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000014059791784
+--- !u!114 &114000014040141224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -558,13 +558,7 @@ MonoBehaviour:
   launchSpeed: 200
   moveDist: 2
   moveSpeed: 1
-  runSpeed: 0
-  runRadius: 0
   size: 1
-  animator: {fileID: 95000014191619894}
-  m_state: 2
-  m_timeInState: 0
-  m_destination: {x: 0, y: 0, z: 0}
 --- !u!135 &135000014229317112
 SphereCollider:
   m_ObjectHideFlags: 1
