@@ -4,6 +4,7 @@ using System.Collections;
 public class FrogSize : MonoBehaviour {
 
 	public float sizeInc;
+	public float score;
 
 	private MovePlayer m_movePlayer;
 
@@ -20,6 +21,8 @@ public class FrogSize : MonoBehaviour {
 	public void GrowSize(float bugSize) {
 		float m = 1.0f + bugSize * sizeInc;
 		transform.localScale *=  m;
+		score += bugSize;
 		m_movePlayer.SetSpeedMult (1.0f / m);
 	}
 }
+		
