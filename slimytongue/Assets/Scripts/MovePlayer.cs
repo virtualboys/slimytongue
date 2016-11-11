@@ -48,7 +48,7 @@ public class MovePlayer : MonoBehaviour {
 
 		transform.position += movement;
 
-		animator.SetFloat ("Speed", movement.magnitude);
+		//animator.SetFloat ("Speed", movement.magnitude);
 	}
 
 	private void Aim(Vector3 input) {

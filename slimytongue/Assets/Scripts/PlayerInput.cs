@@ -16,20 +16,38 @@ public class PlayerInput : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (playerNum == 0)
-        {
-            jump = "Leap";
-            shootTongue = "Jump";
-            horizontal = "Horizontal";
-            vertical = "Vertical";
-        }
-        else if (playerNum == 1)
-        {
-            jump = "Leap2";
-            shootTongue = "Jump2";
-            horizontal = "Horizontal2";
-            vertical = "Vertical2";
-        }
+		switch(Application.platform) {
+
+		case RuntimePlatform.WindowsPlayer:
+		case RuntimePlatform.WindowsEditor:
+			if (playerNum == 0) {
+				jump = "Leap";
+				shootTongue = "Jump";
+				horizontal = "Horizontal";
+				vertical = "Vertical";
+			} else if (playerNum == 1) {
+				jump = "Leap2";
+				shootTongue = "Jump2";
+				horizontal = "Horizontal2";
+				vertical = "Vertical2";
+			}
+			break;
+
+		case RuntimePlatform.OSXPlayer:
+		case RuntimePlatform.OSXEditor:
+			if (playerNum == 0) {
+				jump = "Leap";
+				shootTongue = "JumpMac";
+				horizontal = "Horizontal";
+				vertical = "Vertical";
+			} else if (playerNum == 1) {
+				jump = "Leap2";
+				shootTongue = "Jump2Mac";
+				horizontal = "Horizontal2";
+				vertical = "Vertical2";
+			}
+			break;
+		}
 
 		if (players == null) {
 			players = new List<GameObject> ();
