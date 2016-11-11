@@ -45,8 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BugController.cs" />
      <Compile Include="Assets\Scripts\BugSpawner.cs" />
+     <Compile Include="Assets\Scripts\Bugs\BombBugController.cs" />
+     <Compile Include="Assets\Scripts\Bugs\BugController.cs" />
      <Compile Include="Assets\Scripts\Common\MeshBuilder.cs" />
      <Compile Include="Assets\Scripts\Common\ProcBase.cs" />
      <Compile Include="Assets\Scripts\ExtrudeTongueMesh.cs" />
