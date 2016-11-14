@@ -24,7 +24,7 @@ public class MovePlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         Vector3 input = playerInput.GetAimDir();
 
 		Vector3 movement = Vector3.zero;
