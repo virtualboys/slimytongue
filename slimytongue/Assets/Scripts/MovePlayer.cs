@@ -14,6 +14,8 @@ public class MovePlayer : MonoBehaviour {
 	private TongueController m_tongueController;
     private bool m_jumping;
 
+	public ParticleSystem particlesDust;
+
 	// Use this for initialization
 	void Start () {
         m_rigidbody = GetComponent<Rigidbody>();
@@ -61,9 +63,10 @@ public class MovePlayer : MonoBehaviour {
 
 	private Vector3 Move(Vector3 input) {
 		if (input == Vector3.zero) {
+			particlesDust.startSpeed = 0;
 			return Vector3.zero;
 		}
-
+		particlesDust.startSpeed = 0.005f;
 		return input.normalized * Time.deltaTime * baseSpeed * m_speedMult;
 	}
 
