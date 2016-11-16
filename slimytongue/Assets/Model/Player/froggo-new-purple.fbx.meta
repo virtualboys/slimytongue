@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: adfc7517db1b0483588b5b19cd0b859e
+timeCreated: 1479258353
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: head
+    100004: head.2
+    100006: Joint
+    100008: Joint.1
+    100010: Joint.1.2
+    100012: Joint.1.3
+    100014: Joint.1.4
+    100016: Joint.2
+    100018: Joint.2.2
+    100020: Joint.2.3
+    100022: Joint.3
+    100024: Joint.3.2
+    100026: Joint.3.3
+    100028: Joint.4
+    100030: Joint.5
+    100032: Joint.6
+    100034: mesh_0
+    100036: mesh_0.2
+    100038: Null
+    100040: Null.2
+    100042: Sphere
+    100044: Sphere.2
+    100046: Torus
+    100048: Torus.2
+    400000: //RootNode
+    400002: head
+    400004: head.2
+    400006: Joint
+    400008: Joint.1
+    400010: Joint.1.2
+    400012: Joint.1.3
+    400014: Joint.1.4
+    400016: Joint.2
+    400018: Joint.2.2
+    400020: Joint.2.3
+    400022: Joint.3
+    400024: Joint.3.2
+    400026: Joint.3.3
+    400028: Joint.4
+    400030: Joint.5
+    400032: Joint.6
+    400034: mesh_0
+    400036: mesh_0.2
+    400038: Null
+    400040: Null.2
+    400042: Sphere
+    400044: Sphere.2
+    400046: Torus
+    400048: Torus.2
+    2300000: Sphere
+    2300002: Sphere.2
+    2300004: Torus.2
+    3300000: Sphere
+    3300002: Sphere.2
+    3300004: Torus.2
+    4300000: mesh_0.2
+    4300002: Torus.2
+    4300004: Sphere.2
+    4300006: Sphere
+    7400000: C4D Animation Take
+    9500000: //RootNode
+    13700000: mesh_0.2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
