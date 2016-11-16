@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: distort
-  m_Shader: {fileID: 4800000, guid: 5b2cecd5f50a84796b3078fd73e2f841, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Name: matBrick 1
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _TEX_ON _VCOLOR_ON
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -18,8 +18,14 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: d7057eab07d21415b976e0f07027b820, type: 3}
-        m_Scale: {x: 1.0892437, y: 0.9883564}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Detail
+      second:
+        m_Texture: {fileID: 2800000, guid: 8750a9577f0c8479294facf5a5f23aea, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _DetailAlbedoMap
@@ -46,15 +52,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _GrabTexture
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: 7ea5589afcf8447e4ba5b3d6e5389ec4, type: 3}
+        m_Texture: {fileID: 10916, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -75,10 +75,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Ramp
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ToonShade
+      second:
+        m_Texture: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _BumpAmt
-      second: 10
+        name: _Brightness
+      second: 1
     - first:
         name: _BumpScale
       second: 1
@@ -89,11 +101,20 @@ Material:
         name: _DetailNormalMapScale
       second: 1
     - first:
+        name: _DetailTex
+      second: 1
+    - first:
         name: _DstBlend
       second: 0
     - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
         name: _Glossiness
-      second: 0.5
+      second: 0
+    - first:
+        name: _GlossyReflections
+      second: 1
     - first:
         name: _Metallic
       second: 0
@@ -104,21 +125,63 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
+        name: _OffsetX
+      second: 1
+    - first:
+        name: _OffsetY
+      second: 1
+    - first:
         name: _Parallax
       second: 0.02
+    - first:
+        name: _RimPower
+      second: 1.36
+    - first:
+        name: _ScaleX
+      second: 0.2
+    - first:
+        name: _ScaleY
+      second: 0.2
+    - first:
+        name: _Shininess
+      second: 0.01
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
     - first:
         name: _SrcBlend
       second: 1
     - first:
+        name: _TintColor
+      second: 0
+    - first:
         name: _UVSec
       second: 0
+    - first:
+        name: _VertexColor
+      second: 1
     - first:
         name: _ZWrite
       second: 1
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.9762678, g: 0.86764705, b: 1, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 0, g: 0, b: 0, a: 1}
+      second: {r: 0.96835697, g: 0.42647058, b: 1, a: 1}
+    - first:
+        name: _HighColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _RimColor
+      second: {r: 0.6166331, g: 0.007352948, b: 1, a: 0.6}
+    - first:
+        name: _ShadowColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 1, g: 1, b: 1, a: 1}

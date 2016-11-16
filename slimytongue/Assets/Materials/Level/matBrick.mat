@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: matBrick
-  m_Shader: {fileID: 4800000, guid: 3c77780a012274aa68d343c3075c9199, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _TEX_ON _VCOLOR_ON
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -169,10 +169,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.389858, g: 0.30882353, b: 1, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 0.42647058, g: 0.5016226, b: 1, a: 1}
+      second: {r: 0.30882353, g: 1, b: 0.6853955, a: 1}
     - first:
         name: _HighColor
       second: {r: 1, g: 1, b: 1, a: 1}
