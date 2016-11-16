@@ -35,7 +35,7 @@ public class ExtrudeTongueMesh : ProcBase {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		meshBuilder.ResetGeometry ();
         //mesh
 

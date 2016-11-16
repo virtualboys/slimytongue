@@ -44,7 +44,7 @@ public class TongueController : MonoBehaviour {
 		tongueTip.SetActive (false);
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		if(!IsTongueOut() && playerInput.GetShootDown()) {
 			m_isAiming = true;
 
