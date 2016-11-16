@@ -62,7 +62,6 @@ public class BombBugController : BugController {
         //Debug.Log(ttd);
         if (ttd > ttf * .75f)
         {
-            Debug.Log("blink1");
             if (!m_blinkOn)
             {
                 m_blinkOn = true;
@@ -71,7 +70,6 @@ public class BombBugController : BugController {
         }
         else if (ttd > ttf * .5f)
         {
-                Debug.Log("Blink2");
             if (m_blinkOn)
             {
                 m_blinkOn = false;

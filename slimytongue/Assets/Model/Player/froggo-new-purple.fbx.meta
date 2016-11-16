@@ -88,7 +88,85 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: C4D Animation Take
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mesh_0
+        weight: 1
+      - path: mesh_0.2
+        weight: 1
+      - path: mesh_0.2/Joint
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2/Joint.1.3
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2/Joint.1.3/Joint.3.2
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/head
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/head/head.2
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/head/Sphere
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/head/Sphere.2
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/head/Torus
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/head/Torus/Torus.2
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/Joint.1.4
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/Joint.1.4/Joint.2.3
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/Joint.1.4/Joint.2.3/Joint.6
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/Joint.4
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/Joint.4/Joint.3.3
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.2.2/Joint.4/Joint.3.3/Joint.5
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.3
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.3/Joint.1
+        weight: 1
+      - path: mesh_0.2/Joint/Joint.3/Joint.1/Joint.1.2
+        weight: 1
+      - path: mesh_0.2/Null
+        weight: 1
+      - path: Null.2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -44,7 +44,7 @@ public class TongueController : MonoBehaviour {
 		tongueTip.SetActive (false);
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		if(!IsTongueOut() && playerInput.GetShootDown()) {
 			m_isAiming = true;
 
@@ -150,15 +150,17 @@ public class TongueController : MonoBehaviour {
 			dir = transform.position - tongueTip.transform.position;
 		}
 
-		float s = Time.deltaTime * retractSpeed;
+		float s = Time.fixedDeltaTime * retractSpeed;
 
 		if (dir.magnitude <= s) {
+			
 			if (m_tonguePoints.Count == 0) {
 				DisableTongue ();
 			} else {
+				tongueTip.transform.position = m_tonguePoints [m_tonguePoints.Count - 1].position;
 				RemoveLastTonguePoint ();
 			}
-
+				
 			return;
 		}
 
