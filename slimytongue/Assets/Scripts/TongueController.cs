@@ -185,10 +185,6 @@ public class TongueController : MonoBehaviour {
 		return m_isShooting || m_isRetracting;
 	}
 
-	public bool CanMove() {
-		return !IsTongueOut () && !m_isAiming;
-	}
-
 	public bool IsAiming() {
 		return m_isAiming;
 	}

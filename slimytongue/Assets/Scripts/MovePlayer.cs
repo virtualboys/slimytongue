@@ -5,7 +5,8 @@ public class MovePlayer : MonoBehaviour {
 
 	public float baseSpeed;
     public float jumpVel;
-	private float m_speedMult;
+	public float jumpDist;
+	public float jumpResetTime;
 
 	private PlayerInput playerInput;
 	private Animator animator;
@@ -13,7 +14,15 @@ public class MovePlayer : MonoBehaviour {
     private Rigidbody m_rigidbody;
 	private SphereCollider m_collider;
 	private TongueController m_tongueController;
+
 	private bool m_isGrounded;
+	private bool m_isJumping;
+
+	private float m_speedMult;
+
+	private Vector3 m_jumpDir;
+	private float m_currJumpDist;
+	private float m_disableTimer;
 
 	public ParticleSystem particlesDust;
 
@@ -26,29 +35,33 @@ public class MovePlayer : MonoBehaviour {
 		m_speedMult = 1.0f;
 
 		m_collider = GetComponent<SphereCollider> ();
+		m_isGrounded = true;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        Vector3 input = playerInput.GetAimDir();
+		if (m_disableTimer > 0) {
+			m_disableTimer -= Time.fixedDeltaTime;
+			return;
+		}
+
+		Vector3 input = playerInput.GetMovement();
 
 		Vector3 movement = Vector3.zero;
 
-		if (m_tongueController.CanMove ()) {
-            //if(!m_jumping)
-            {
-                if(playerInput.GetJumpDown())
-                {
-                    Jump(input);
-                } else
-                {
-			        movement = Move (input);
-                }
-            } 
-		}
+		if (!m_isJumping && !m_tongueController.IsTongueOut ()) {
 
-		if (m_tongueController.CanMove () || m_tongueController.IsAiming ()) {
+			if (!m_tongueController.IsAiming ()) {
+				if (playerInput.GetJumpDown ()) {
+					Jump (input);
+				} else {
+					movement = Move (input);
+				}
+			}
+
 			Aim (input);
+		} else if (m_isJumping) {
+			movement = DoJump ();
 		}
 
 		transform.position += movement;
@@ -61,7 +74,7 @@ public class MovePlayer : MonoBehaviour {
 			return;
 		}
 
-		transform.rotation = Quaternion.LookRotation (input);
+		transform.rotation = Quaternion.LookRotation (input.normalized);
 	}
 
 	private Vector3 Move(Vector3 input) {
@@ -70,16 +83,31 @@ public class MovePlayer : MonoBehaviour {
 			return Vector3.zero;
 		}
 		particlesDust.startSpeed = 0.005f;
-		return input.normalized * Time.deltaTime * baseSpeed * m_speedMult;
+		return input * Time.fixedDeltaTime * baseSpeed * m_speedMult;
 	}
 
     private void Jump(Vector3 input)
     {
-        input.y = 1;
-        m_rigidbody.AddForce(input * jumpVel * m_rigidbody.mass);
-        Debug.Log("Jump");
+		if (input.magnitude == 0) {
+			input = transform.forward;
+		}
 
+		m_isJumping = true;
+		m_jumpDir = input.normalized;
+		m_currJumpDist = 0;
     }
+
+	private Vector3 DoJump() {
+		float s = Time.fixedDeltaTime * jumpVel * m_speedMult;
+
+		m_currJumpDist += s;
+		if (m_currJumpDist >= jumpDist) {
+			m_isJumping = false;
+			m_disableTimer = jumpResetTime;
+		}
+
+		return s * m_jumpDir;
+	}
 
 	private void UpdateIsGrounded() {
 		//RaycastHit hit;
