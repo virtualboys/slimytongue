@@ -45,10 +45,14 @@ public class TongueController : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		if(!IsTongueOut() && playerInput.GetShootDown()) {
+        if (playerInput.GetShootUp())
+        {
+            Debug.Log("SHOOOTUP");
+        }
+		/*if(!IsTongueOut() && playerInput.GetShootDown() && !playerInput.GetShootUp()) {
 			m_isAiming = true;
 
-		} else if (m_isAiming && playerInput.GetShootUp()) {
+		} else*/ if (playerInput.GetShootUp() && !IsTongueOut()) {
 			ShootTongue ();
 
 		} else if (m_isShooting) {

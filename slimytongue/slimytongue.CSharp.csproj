@@ -64,7 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ColorSuite\ColorSuite-master\Assets\ColorSuite\ColorSuite.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\BugSpawner.cs" />
+    <Compile Include="Assets\Scripts\Bugs\AIStateController.cs" />
+    <Compile Include="Assets\Scripts\Bugs\BeeController.cs" />
     <Compile Include="Assets\Scripts\Bugs\BombBugController.cs" />
     <Compile Include="Assets\Scripts\Bugs\BugController.cs" />
     <Compile Include="Assets\Scripts\Common\MeshBuilder.cs" />

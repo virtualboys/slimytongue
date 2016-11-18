@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: a4b19f9430f1c48489c0e0e047288ea1
+timeCreated: 1479408663
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.004
+    100012: Bone.004_end
+    100014: Bone.006
+    100016: Bone.006_end
+    100018: Bone.007
+    100020: Bone.007_end
+    100022: Bone.009
+    100024: Bone.010
+    100026: Bone.010_end
+    100028: Bone.011
+    100030: Bone.012
+    100032: Bone.012_end
+    100034: Bone.013
+    100036: Bone.014
+    100038: Bone.015
+    100040: Bone.015_end
+    100042: Bone.017
+    100044: Bone.018
+    100046: Bone.018_end
+    100048: Bone.019
+    100050: Bone.020
+    100052: Bone.020_end
+    100054: Bone.021
+    100056: Bone.022
+    100058: Bone.023
+    100060: Bone.023_end
+    100062: Bone.025
+    100064: Bone.026
+    100066: Bone.026_end
+    100068: Bone.027
+    100070: Bone.028
+    100072: Bone.028_end
+    100074: //RootNode
+    100076: Polygon.1
+    100078: Sun
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.004
+    400012: Bone.004_end
+    400014: Bone.006
+    400016: Bone.006_end
+    400018: Bone.007
+    400020: Bone.007_end
+    400022: Bone.009
+    400024: Bone.010
+    400026: Bone.010_end
+    400028: Bone.011
+    400030: Bone.012
+    400032: Bone.012_end
+    400034: Bone.013
+    400036: Bone.014
+    400038: Bone.015
+    400040: Bone.015_end
+    400042: Bone.017
+    400044: Bone.018
+    400046: Bone.018_end
+    400048: Bone.019
+    400050: Bone.020
+    400052: Bone.020_end
+    400054: Bone.021
+    400056: Bone.022
+    400058: Bone.023
+    400060: Bone.023_end
+    400062: Bone.025
+    400064: Bone.026
+    400066: Bone.026_end
+    400068: Bone.027
+    400070: Bone.028
+    400072: Bone.028_end
+    400074: //RootNode
+    400076: Polygon.1
+    400078: Sun
+    4300000: Polygon.1
+    7400000: Armature|Disc.3|C4D Animation Take|Layer0
+    7400002: Armature|flap
+    7400004: Armature|flap.001
+    7400006: Armature|ok
+    7400008: Armature|PoseLib
+    9500000: //RootNode
+    13700000: Polygon.1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
